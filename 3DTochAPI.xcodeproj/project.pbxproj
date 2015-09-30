@@ -416,6 +416,7 @@
 				ED6F692C1BBB8D8E00E3201E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED6F692D1BBB8D8E00E3201E /* Build configuration list for PBXNativeTarget "3DTochAPITests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +425,7 @@
 				ED6F692F1BBB8D8E00E3201E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

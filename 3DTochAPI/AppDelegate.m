@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+
 @interface AppDelegate ()
 
 @end
@@ -16,8 +17,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    UIApplicationShortcutItem *messageShortcutItem = [[UIApplicationShortcutItem alloc] initWithType:@"我的消息" localizedTitle:@"我的消息"];
+    UIApplicationShortcutItem *userCenterShortcutItem = [[UIApplicationShortcutItem alloc] initWithType:@"个人中心" localizedTitle:@"个人中心"];
+    UIApplicationShortcutItem *shopShortcutItem = [[UIApplicationShortcutItem alloc] initWithType:@"购物车" localizedTitle:@"购物车"];
+    NSArray *ShortcutItems = [[NSArray alloc] initWithObjects:messageShortcutItem, userCenterShortcutItem,shopShortcutItem, nil];
+    [[UIApplication sharedApplication] setShortcutItems:ShortcutItems];
     return YES;
+}
+
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler{
+    if ([shortcutItem.localizedTitle  isEqual: @"我的消息"]) {
+        return;
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
